@@ -32,35 +32,32 @@ const handleSubmit = (e) => {
 };
 
 return (
-  <div className="container">
+  
 
-    <h2 className="head">Password Change</h2>
-    <form onSubmit={handleSubmit}>
-    
-      <div className="email" >
-        <label className="lb" >Email:</label>
-        <input
-          type="email"
-          value={email}
-          onChange={handleChangeEmail}
-          required
-        />
-      </div>
-
-      <div>
-        <label className="lb">New Password:</label>
-        <input
-          type="password"
-          value={newPassword}
-          onChange={handleChangePassword}
-          required
-        />
-      </div>
-
-      <button type="submit">Change Password</button>
-      
-    </form>
+  <div className="form-container">
+  <h2>Password Change</h2>
+  <form onSubmit={handleSubmit}>
+    <div>
+      <label className="lb">Email:</label>
+      <input
+        type="email"
+        value={email}
+        onChange={handleChangeEmail}
+        required
+      />
     </div>
+    <div>
+      <label>New Password:</label>
+      <input
+        type="password"
+        value={newPassword}
+        onChange={handleChangePassword}
+        required
+      />
+    </div>
+    <button type="submit">Change Password</button>
+  </form>
+</div>
 );
 };
 
